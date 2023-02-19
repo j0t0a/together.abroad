@@ -1,0 +1,213 @@
+*{
+    font-family: 'Manrope', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border: none;
+    scroll-behavior: smooth;
+}
+ul li{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.main .banner { 
+    background: #ECECEC;
+    display: flex;
+}
+
+.main .banner .banner__text { 
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .banner .banner__text .title{
+    margin-bottom: 32px;
+}
+.main .banner .banner__text h4{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #000000;
+    text-align: center;
+    max-width: 520px;
+    margin-bottom: 68px;
+}
+
+.main .banner .banner__image { 
+    width: 50%;
+}
+
+.main .serviceGoals { 
+    background: url('../assets/goals-bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.serviceGoals .serviceGoalsWrapper{
+    max-width: min(1346px, 90%);
+    margin: 0 auto;
+    padding: 70px 0 64px;
+}
+
+.main .serviceGoals .title { 
+    display: flex;
+    justify-content: center;
+}
+
+.main .serviceGoals .serviceGoals__content { 
+    display: flex;
+    align-items: center;
+    margin-top: 44px;
+}
+
+.serviceGoals__content .serviceGoals__image { 
+    margin-right: 80px;
+}
+
+.serviceGoals__text .serviceGoal__item { 
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+    position: relative;
+}
+
+.serviceGoal__item:before{
+    content: '';
+    height: 25px;
+    width: 25px;
+    background: #2080C6;
+    border-radius: 50%;
+    position: absolute;
+    left: -18px;
+    transform: translate(-100%, 6px);
+    top: 0;
+}
+
+.serviceGoal__item:first-child{
+    margin-bottom: 60px;
+}
+
+.main .services{
+    position: relative;
+    overflow: hidden;
+}
+
+.services .servicesWrapper { 
+    max-width: min(1346px, 90%);
+    margin: 0 auto;
+    padding-top: 70px;    
+}
+
+.services .title{
+
+}
+
+.main .services .smallShape { 
+    position: absolute;
+    bottom: 85px;
+    /* left: -159px; */
+    left: 0;
+    z-index: -1;
+}
+
+.main .services .bigShape { 
+    position: absolute;
+    bottom: 48px;
+    /* right: -330px; */
+    right: 0;
+    z-index: -1;
+}
+
+.main .services .services__list { 
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.services__list .services__item { 
+    background: #ECECEC;
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 28px;
+    padding: 24px 30px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 384px;
+    margin-bottom: 58px;
+}
+
+.services__item_title { 
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 18px;
+    color: #2080C6;
+    margin-bottom: 25px;
+}
+
+.services__item_image { 
+    margin-bottom: 60px;
+}
+
+.services__item_text { 
+    margin-bottom: 42px;
+}
+
+.services__item_button { 
+    margin-top: auto;
+    width: 100%;
+}  
+
+
+@media (max-width: 1120px) {
+    .main .banner { 
+        flex-direction: column;
+        padding: 70px 0 60px;
+    }
+    
+    .main .banner .banner__text { 
+        width: 100%;
+    }
+    
+    .main .banner .banner__text h4{
+        max-width: min(800px, 90vw);
+        margin-bottom: 50px;
+    }
+    
+    .main .banner .banner__image { 
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .main .serviceGoals .serviceGoals__content { 
+        flex-direction: column-reverse;
+    }
+    
+    .serviceGoals__content .serviceGoals__image { 
+        margin-right: 0;
+    }
+    
+    .serviceGoals__text .serviceGoal__item { 
+        max-width: min(780px, 80vw);
+        transform: translateX(9px);
+        margin-bottom: 40px;
+    }
+    
+    .serviceGoal__item:first-child{
+        margin-bottom: 40px;
+    }
+}

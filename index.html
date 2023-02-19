@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/shared.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    
+    <title>Together Abroad</title>
+</head>
+<body>
+    <header class="header">
+       <div class="headerWrapper">
+        <div onclick="toggleMenu()" class="mobileBurger">
+            <div class="mobileBurger__button"></div>
+        </div>
+        <menu class="header__menu">
+            <img class="header__logo" src="./assets/logo.svg" alt="logo">
+            <ul class="header__menu_list">
+                <li class="header__menu_item active"><a href="./index.html">Main page</a></li>
+                <li class="header__menu_item"><a href="#ourGoals">About us</a></li>
+                <li class="header__menu_item"><a href="./questions.html">Testing</a></li>
+                <li class="header__menu_item"><a href="./suggest.html">Search</a></li>
+            </ul>
+        </menu>
+        <div onclick="toggleLoginModal()" class="header__auth">
+            <div class="header__not_auth">
+                Login
+                <img src="./assets/enter-icon.svg" alt="enter">
+            </div>
+            <div class="header__mobile_auth">
+                <img src="./assets/profile-image.png" alt="profile">
+            </div>
+
+        </div>
+        <div onclick="onSwitcherClick()" id="languageSwitcher" class="header__languageSwitcher">
+            <a>Eng <img src="./assets/dark-left-icon.svg" alt="selected"></a> 
+            <a>Укр</a>
+        </div>
+       </div>
+
+       <div id="mobileMenu" class="mobileMenu">
+            <img class="mobileMenu__close" onclick="toggleMenu()" src="./assets/close-icon.svg" alt="close">
+            <ul class="mobileMenu__list">
+                <li class="mobileMenu__item active"><a href="./index.html">Main page</a></li>
+                <li class="mobileMenu__item"><a href="#ourGoals">About us</a></li>
+                <li class="mobileMenu__item"><a href="./questions.html">Testing</a></li>
+                <li class="mobileMenu__item"><a href="./suggest.html">Search</a></li>
+            </ul>
+            <div class="mobileMenu__auth">
+                <div class="mobileMenu__auth_user">
+                    <img src="./assets/profile-image.png" alt="">
+                    Name of user
+                </div>
+
+                <div class="mobileMenu__auth_exit">
+                    Exit <img src="./assets/exit-icon.svg" alt="enter">
+                </div>
+            </div>
+       
+            <div class="mobileMenu__languageSwitcher">
+                <span class="active">Eng <img src="./assets/dark-left-icon.svg" alt=""></span>
+                <span onclick="onChangeLanguage()">Укр</span>
+            </div>
+        </div>
+
+        <div id="loginModal" class="loginModal modal">
+            <div class="modalWindow">
+                <img onclick="toggleLoginModal()" class="close-icon" src="./assets/close-icon.svg" alt="close">
+                <form action="">
+                    <h3 class="modalTitle">
+                        Welcome
+                    </h3>
+                    <label for="">
+                        <span>Email</span>
+                        <input type="text">
+                    </label>
+                    <label for="">
+                        <span>Password</span>
+                        <input id="loginPassInput" type="password">
+                        <img onclick="togglePasswordInput('loginPassInput')" class="password-icon" src="./assets/hide-eye.svg" alt="">
+                    </label>
+                    <button class="small-button" type="submit"><a href="./auth.html">Log in</a></button>
+
+                    <div class="otherActions">
+                        <span onclick="toggleLoginModal();toggleRegisterModal()" class="modalAction">Sign up</span>
+                        <span onclick="toggleLoginModal();toggleRegisterModal()" class="modalAction">Forgot password?</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="registerModal" class="registerModal modal">
+            <div class="modalWindow">
+                <img onclick="toggleRegisterModal()" class="close-icon" src="./assets/close-icon.svg" alt="close">
+                <form action="">
+                    <h3 class="modalTitle">
+                        Join us
+                    </h3>
+                    <label for="">
+                        <span>First name</span>
+                        <input type="text">
+                    </label>
+                    <label for="">
+                        <span>Last name</span>
+                        <input type="text">
+                    </label>
+                    <label for="">
+                        <span>Email</span>
+                        <input type="text">
+                    </label>
+                    <label for="">
+                        <span>Password</span>
+                        <input id="registerPassInput" type="password">
+                        <img onclick="togglePasswordInput('registerPassInput')" class="password-icon" src="./assets/hide-eye.svg" alt="">
+                    </label>
+                    <label for="">
+                        <span>Repeat password</span>
+                        <input id="registerRepeatPassInput" type="password">
+                        <img onclick="togglePasswordInput('registerRepeatPassInput')" class="password-icon" src="./assets/hide-eye.svg" alt="">
+                    </label>
+                    <label for="">
+                        <span>Birth Date</span>
+                        <input type="date">
+                    </label>
+
+                    <label for="profileImage">
+                        <span>Profile picture</span>
+                        <input id="profileImage" type="file">
+                        <div class="customFileInput"></div>
+                    </label>
+
+                    <label for="">
+                        <span>Country</span>
+                        <select id="countrySelector">
+                            <!-- form JS -->
+                        </select>
+                    </label>
+
+                    <button onclick="onSendRequest()" class="small-button" type="submit">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="banner">
+            <div class="banner__text">
+                <h1 class="title">Together abroad</h1>
+                <h4>Take the questionnaire and find your soulmate</h4>
+                <button>Take the questionnaire ></button>
+            </div>
+            <img class="banner__image" src="./assets/main-poster.png" alt="banner">
+        </div>
+
+        <div id="ourGoals" class="serviceGoals">
+            <div class="serviceGoalsWrapper">
+                <h2 class="title">Our goal</h2>
+                <div class="serviceGoals__content">
+                    <img class="serviceGoals__image" src="./assets/goals-image.png" alt="">
+                    <ul class="serviceGoals__text">
+                        <li class="serviceGoal__item">
+                            The main purpose of the service is to find like-minded people, friends for hose who have moved from Ukraine, so that they can freely communicate, learn about events, etc.
+                        </li>
+                        <li class="serviceGoal__item">
+                            Our service is aimed at supporting the mental health of people who have gone abroad to Ukraine.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="services">
+            <img class="smallShape" src="./assets/small-shape.png" alt="">
+            <img class="bigShape" src="./assets/big-shape.png" alt="">
+            <div class="servicesWrapper">
+                
+                <h2 class="title">Services</h2>
+
+                <ul class="services__list">
+                    <li class="services__item">
+                        <h4 class="services__item_title">Events</h4>
+                        <img class="services__item_image" src="./assets/services1.png" alt="services1">
+                        <p class="services__item_text">Share and participate in events that are about to take place, invite people to enjoy it together.</p>
+                        <button onclick="toggleLoginModal()" class="services__item_button small-button">View events</button>
+                    </li>
+                    <li class="services__item">
+                        <h4 class="services__item_title">Together</h4>
+                        <img class="services__item_image" src="./assets/services2.png" alt="services2">
+                        <p class="services__item_text">Register and take the test to find like-minded people, because together everything is easier and way more interesting.</p>
+                        <button onclick="toggleLoginModal()" class="services__item_button small-button">Registration</button>
+                    </li>
+                    <li class="services__item">
+                        <h4 class="services__item_title">Search</h4>
+                        <img class="services__item_image" src="./assets/services3.png" alt="services3">
+                        <p class="services__item_text">Find interesting people and events using our search</p>
+                        <button onclick="toggleLoginModal()" class="services__item_button small-button">Find what you need</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footerWrapper">
+            <ul class="footer__menu">
+                    <li class="footer__menu_item active">Main</li>
+                <li class="footer__menu_item">About us</li>
+                <li class="footer__menu_item">Testing</li>
+                <li class="footer__menu_item">Search</li>
+            </ul>
+            <div class="footer__logo">
+                <img src="./assets/logo.svg" alt="logo">
+            </div>
+            <div class="footer__socials">
+                <ul class="footer__social_list">
+                    <li class="footer__social_item">
+                        <a href="">
+                            <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                            viewBox="-337 273 123.5 256" xml:space="preserve">
+                                <path d="M-260.9,327.8c0-10.3,9.2-14,19.5-14c10.3,0,21.3,3.2,21.3,3.2l6.6-39.2c0,0-14-4.8-47.4-4.8c-20.5,0-32.4,7.8-41.1,19.3
+                                    c-8.2,10.9-8.5,28.4-8.5,39.7v25.7H-337V396h26.5v133h49.6V396h39.3l2.9-38.3h-42.2V327.8z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__social_item">
+                        <a href="">
+                            <svg width="800px" height="800px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="icon" transform="translate(42.666738, 106.667236)">
+                                        <path d="M214.304705,0.000543068834 C226.424729,0.0216871426 348.414862,0.444568619 380.010595,8.90219814 C398.378595,13.7775234 412.821262,28.1915286 417.749262,46.6329765 C426.309902,78.5811951 426.652328,143.739282 426.666025,148.900811 L426.666025,149.553735 C426.652328,154.730893 426.309902,220.084332 417.749262,252.032551 C412.821262,270.473998 398.378595,284.888004 380.010595,289.763329 C347.417102,298.488042 218.629945,298.662536 213.491496,298.666026 L213.175003,298.666026 C208.035726,298.662536 79.2276622,298.488042 46.6132622,289.763329 C28.2665955,284.888004 13.8025955,270.473998 8.89592883,252.032551 C0.355768832,220.084332 0.014162432,154.730893 0.000498176,149.553735 L0.000498176,148.900811 C0.014162432,143.739282 0.355768832,78.5811951 8.89592883,46.6329765 C13.8025955,28.1915286 28.2665955,13.7775234 46.6132622,8.90219814 C78.2292622,0.444568619 200.239662,0.0216871426 212.361662,0.000543068834 Z M169.685262,86.2714908 L169.685262,212.394036 L281.215929,149.226778 L169.685262,86.2714908 Z" id="Shape">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>      
+                        </a>  
+                    </li>
+                    <li class="footer__social_item">
+                        <a href="">
+                            <svg width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.805 7.996c0 0 0 0.001 0 0.001 0 0.994-0.806 1.799-1.799 1.799s-1.799-0.806-1.799-1.799c0-0.994 0.806-1.799 1.799-1.799v0c0.993 0.001 1.798 0.805 1.799 1.798v0zM16 20.999c-2.761 0-4.999-2.238-4.999-4.999s2.238-4.999 4.999-4.999c2.761 0 4.999 2.238 4.999 4.999v0c0 0 0 0.001 0 0.001 0 2.76-2.237 4.997-4.997 4.997-0 0-0.001 0-0.001 0h0zM16 8.3c0 0 0 0-0 0-4.253 0-7.7 3.448-7.7 7.7s3.448 7.7 7.7 7.7c4.253 0 7.7-3.448 7.7-7.7v0c0-0 0-0 0-0.001 0-4.252-3.447-7.7-7.7-7.7-0 0-0 0-0.001 0h0zM16 3.704c4.003 0 4.48 0.020 6.061 0.089 1.003 0.012 1.957 0.202 2.84 0.538l-0.057-0.019c1.314 0.512 2.334 1.532 2.835 2.812l0.012 0.034c0.316 0.826 0.504 1.781 0.516 2.778l0 0.005c0.071 1.582 0.087 2.057 0.087 6.061s-0.019 4.48-0.092 6.061c-0.019 1.004-0.21 1.958-0.545 2.841l0.019-0.058c-0.258 0.676-0.64 1.252-1.123 1.726l-0.001 0.001c-0.473 0.484-1.049 0.866-1.692 1.109l-0.032 0.011c-0.829 0.316-1.787 0.504-2.788 0.516l-0.005 0c-1.592 0.071-2.061 0.087-6.072 0.087-4.013 0-4.481-0.019-6.072-0.092-1.008-0.019-1.966-0.21-2.853-0.545l0.059 0.019c-0.676-0.254-1.252-0.637-1.722-1.122l-0.001-0.001c-0.489-0.47-0.873-1.047-1.114-1.693l-0.010-0.031c-0.315-0.828-0.506-1.785-0.525-2.785l-0-0.008c-0.056-1.575-0.076-2.061-0.076-6.053 0-3.994 0.020-4.481 0.076-6.075 0.019-1.007 0.209-1.964 0.544-2.85l-0.019 0.059c0.247-0.679 0.632-1.257 1.123-1.724l0.002-0.002c0.468-0.492 1.045-0.875 1.692-1.112l0.031-0.010c0.823-0.318 1.774-0.509 2.768-0.526l0.007-0c1.593-0.056 2.062-0.075 6.072-0.075zM16 1.004c-4.074 0-4.582 0.019-6.182 0.090-1.315 0.028-2.562 0.282-3.716 0.723l0.076-0.025c-1.040 0.397-1.926 0.986-2.656 1.728l-0.001 0.001c-0.745 0.73-1.333 1.617-1.713 2.607l-0.017 0.050c-0.416 1.078-0.67 2.326-0.697 3.628l-0 0.012c-0.075 1.6-0.090 2.108-0.090 6.182s0.019 4.582 0.090 6.182c0.028 1.315 0.282 2.562 0.723 3.716l-0.025-0.076c0.796 2.021 2.365 3.59 4.334 4.368l0.052 0.018c1.078 0.415 2.326 0.669 3.628 0.697l0.012 0c1.6 0.075 2.108 0.090 6.182 0.090s4.582-0.019 6.182-0.090c1.315-0.029 2.562-0.282 3.716-0.723l-0.076 0.026c2.021-0.796 3.59-2.365 4.368-4.334l0.018-0.052c0.416-1.078 0.669-2.326 0.697-3.628l0-0.012c0.075-1.6 0.090-2.108 0.090-6.182s-0.019-4.582-0.090-6.182c-0.029-1.315-0.282-2.562-0.723-3.716l0.026 0.076c-0.398-1.040-0.986-1.926-1.729-2.656l-0.001-0.001c-0.73-0.745-1.617-1.333-2.607-1.713l-0.050-0.017c-1.078-0.416-2.326-0.67-3.628-0.697l-0.012-0c-1.6-0.075-2.108-0.090-6.182-0.090z"></path>
+                            </svg>  
+                        </a>  
+                    </li>
+                    <li class="footer__social_item">
+                        <a href="">
+                            <svg  width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <span class="privacy">© SITE 2023</span>
+        </div>
+    </footer>
+
+    <script src="./js/language.js"></script>
+    <script src="./js/mobileMenu.js"></script>
+    <script src="./js/modals.js"></script>
+    
+</body>
+</html>

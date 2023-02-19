@@ -1,0 +1,123 @@
+body{
+	font-family: 'Manrope';
+	font-style: normal;
+	font-size: 22px;
+	/* or 182% */
+	color: #000000;
+}
+
+.main{
+	padding-bottom: 100px;
+}
+
+.headText>h1{
+	color: rgb(32, 128, 198);
+	text-align: center;
+	margin-bottom: 15px;
+}
+.headText>p{
+	text-align: center;
+	font-size: 17px;
+}
+label{
+	font-size: 17px;
+}
+.headText{
+	display: block;
+	margin:0 auto;
+}
+.main_list {
+	display: flex;
+	flex-direction: row;
+
+}
+.checkBoxTest{
+	width: 459px;
+}
+
+.radioButtonTest{
+	width: 459px;
+}
+
+.checkBoxPictureTest{
+	width: 459px;
+}
+.image{
+	margin-right: 15px;
+	height: 218px;
+	width: 167px;
+	border-radius: 15px;
+}
+.answerBlock{
+	flex-direction: row;
+	align-items: center;
+	display: flex;
+}
+.PossibleAnswer
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.selectListTest{
+	font-size: 17px;
+	border: 1px solid rgb(32, 128, 198);
+	border-radius: 7px;
+	color: rgb(32, 128, 198);
+	width: 200px;
+	height: 45px;
+	text-align: center;
+}
+.list1{
+	  width: 550px;
+	  margin-left: 400px;
+}
+.list2{
+	width: 550px;
+	margin-left: 400px;
+}
+.list3{
+	width: 550px;
+	margin-left: 400px;
+}
+.list4{
+	width: 550px;
+	margin-left: 400px;
+}
+.NextBack{
+	margin-top: 40px;
+	margin-left: 75px;
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 650px;
+	
+}
+.nextBackButton{
+	margin-top: 3px;
+	margin-left: 3px;
+	width: 164px;
+	height: 59px;
+	border-radius: 30px;
+	font-size: 23px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color:rgba(32, 128, 198, 1);
+	background: white;
+	border: none;
+	transition: 0.9s;
+}
+.nextBackButton:hover{
+	background: linear-gradient(to right, rgba(124, 209, 236, 0.79), rgba(48, 67, 233, 1));
+	color: white;
+	border: none;
+	transition: 0.9s;
+}
+.backButton{
+	width: 170px;
+	height: 65px;
+	border-radius: 30px;
+	background: linear-gradient(to right, rgba(124, 209, 236, 0.79), rgba(48, 67, 233, 1));
+}

@@ -1,0 +1,144 @@
+.footer *{
+    font-family: 'Manrope', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border: none;
+}
+.footer ul li{
+    list-style: none;
+}
+
+.footer { 
+    background: #75B7E7;
+    width: 100vw;
+    
+}
+
+.footer .footerWrapper{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: min(1346px, 90%);
+    margin: 0 auto;
+    padding: 60px 0 26px;
+}
+
+.footer .footer__menu { 
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.footer__menu_item{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.footer__menu_item:not(:last-child){
+    margin-right: 30px;
+}
+
+.footer__menu_item.active{
+}
+
+.footer .footer__logo { 
+    width: 20%;
+    text-align: center;
+}
+
+.footer .footer__socials { 
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer__social_list { 
+    display: flex;
+}
+
+.footer__social_item { 
+    height: 42px;
+    width: 42px;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    margin-right: 40px;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+.footer__social_item a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__social_item svg{
+    height: 28px;
+}
+.footer__social_item svg path{
+    fill: #ffffff;
+    transition: 250ms;
+}
+
+.footer__social_item:hover{
+    border: 2px solid #CFCFCF;
+}
+
+.footer__social_item:hover svg path{
+    fill: #CFCFCF;
+}
+
+.privacy{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 48px;
+    width: 100%;
+}
+
+
+@media (max-width: 1120px){
+    .footer .footer__menu { 
+        display: none;
+    }
+    .footer .footer__logo { 
+        display: none;
+    }
+    
+    .footer .footer__socials { 
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .footer__social_list { 
+        display: flex;
+    }
+    
+    .footer__social_item { 
+        height: 10vw;
+        width: 10vw;
+        border: 3px solid #FFFFFF;
+        border-radius: 1.5vw;
+    }
+
+    .footer__social_item:last-child {
+        margin-right: 0;
+    }
+
+    .footer__social_item svg{
+        height: 6vw;
+    }
+}

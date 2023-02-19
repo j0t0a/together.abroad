@@ -1,0 +1,232 @@
+main {
+	display: block;
+
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+section.people {
+	width: 100%;
+	height: 1088px;
+	display: block;
+	margin: 0 auto;
+	background-color: #FAF3F3;
+	background-image: url("../images/elipse1.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	overflow-x: hidden;
+}
+
+section.people h2 {
+	text-align: center;
+	font-family: 'Manrope', sans-serif;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 64px;
+	line-height: 68px;
+	color: #2080C6;
+	padding-top: 44px;
+	margin-bottom: 86px;
+}
+
+.main_list {
+	display: flex;
+	flex-direction: row;
+
+}
+
+.list {
+	background: #FDFAFA;
+	box-shadow: 0px 4px 10px 2px #7FB1DD;
+	border-radius: 16px;
+	width: 428px;
+	height: 191px;
+	margin-bottom: 48px;
+	margin-top: 5px;
+
+}
+
+.list1 {
+	margin-left: 135px;
+	width: 500px;
+}
+
+.list2 {
+	margin-left: 132px;
+	width: 500px;
+}
+
+.list .img {
+	display: flex;
+	flex-direction: row;
+}
+
+.list .img img.avatar {
+	width: 87px;
+	height: 87px;
+	margin: 37px 24px 0 51px;
+}
+
+.list .description {
+	margin-top: 36px;
+}
+
+.list .description h3 {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	color: #000000;
+	margin-bottom: 12px;
+}
+
+.list .description p {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+	/* or 138% */
+	margin-bottom: 12px;
+	display: flex;
+	align-items: center;
+
+	color: #161616;
+}
+
+.list .description p.age {
+	margin-bottom: 0;
+}
+
+.list .description p img {
+	margin-left: 120px;
+
+}
+
+.list .btn {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 15px 0 0 54px;
+}
+
+.list .btn p {
+	margin-right: 100px;
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	display: flex;
+	align-items: center;
+	text-decoration-line: underline;
+	color: #696969;
+
+}
+
+.list .btn button {
+	background: linear-gradient(94.43deg, rgba(124, 209, 236, 0.79) 3.45%, #3043E9 102.78%);
+	border-radius: 32px;
+	padding: 8px 33px;
+	border: none;
+	font-family: 'Inria Sans', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 22px;
+	align-items: center;
+	color: #FFFFFF;
+}
+
+.list .btn button img {
+	margin-left: 3px;
+	display: inline;
+}
+
+.slider .slick-arrow.slick-prev {
+	margin-top: 500px;
+}
+
+@media screen and (max-width: 1600px) {
+	section.people {
+		width: 1500px;
+
+	}
+
+	.list {
+		margin-left: 290px;
+	}
+
+	.slick-prev {
+		left: 547px;
+	}
+}
+
+@media screen and (max-width: 1166px) {
+	section.people {
+		width: 1166px;
+		background-image: url("../images/mobile.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		overflow-x: hidden;
+	}
+
+	section.people h2 {
+		width: 800px;
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.list {
+		margin-left: 238px;
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+	section.people {
+		width: 500px;
+		background-image: url("../images/mobile.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		overflow-x: hidden;
+	}
+
+	section.people h2 {
+		width: 370px;
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+	}
+
+
+
+	.list {
+		margin-left: -98px;
+		margin-top: 20px;
+	}
+
+}
