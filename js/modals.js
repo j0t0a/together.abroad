@@ -25,7 +25,7 @@ function togglePasswordInput(inputId){
     }
 }
 
-countrySelector.onload(setCountries())
+countrySelector?.onload?.(setCountries())
 
 function setCountries(){
     const countries = [
